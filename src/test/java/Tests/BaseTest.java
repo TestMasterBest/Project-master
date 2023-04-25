@@ -13,7 +13,8 @@ public class BaseTest {
 
     public void setUp() {
 
-        WebDriverManager.firefoxdriver().driverVersion("0.32.1").setup(); // Установили настройки драйвера
+        //WebDriverManager.firefoxdriver().driverVersion("0.32.1").setup(); // Установили настройки драйвера
+        WebDriverManager.firefoxdriver().setup(); // Установили настройки драйвера
         Configuration.browser = "firefox";
         Configuration.browserSize = "1920x1080";
         Configuration.timeout = 10000;
