@@ -13,25 +13,14 @@ public class BaseTest {
 
     public void setUp() {
 
-        //WebDriverManager.firefoxdriver().driverVersion("0.32.1").setup(); // Установили настройки драйвера
-        WebDriverManager.firefoxdriver().setup(); // Установили настройки драйвера
+     WebDriverManager.firefoxdriver().driverVersion("0.32.1").setup(); // Установили настройки драйвера
+        //WebDriverManager.firefoxdriver().setup(); // Установили настройки драйвера
         Configuration.browser = "firefox";
         Configuration.browserSize = "1920x1080";
         Configuration.timeout = 10000;
         Configuration.driverManagerEnabled = true;
         Configuration.headless = true;
         Configuration.fastSetValue=true;
-        Configuration.accept_untrusted_certs =true;
-        
-        //It create firefox profile
-        FirefoxProfile profile=new FirefoxProfile();
-
-        // This will set the true value
-        profile.setAcceptUntrustedCertificates(true);
-        
-        // This will open  firefox browser using above created profile
-        WebDriver driver=new FirefoxDriver(profile);
-
         
      /*   Configuration.remote = "http://localhost:4444/wd/hub";
         Configuration.browser = "chrome";
