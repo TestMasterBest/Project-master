@@ -23,6 +23,16 @@ public class BaseTest {
         Configuration.fastSetValue=true;
         Configuration.accept_untrusted_certs =true;
         
+        //It create firefox profile
+        FirefoxProfile profile=new FirefoxProfile();
+
+        // This will set the true value
+        profile.setAcceptUntrustedCertificates(true);
+        
+        // This will open  firefox browser using above created profile
+        WebDriver driver=new FirefoxDriver(profile);
+
+        
      /*   Configuration.remote = "http://localhost:4444/wd/hub";
         Configuration.browser = "chrome";
         Configuration.browserSize = "1920x1080";
