@@ -21,7 +21,8 @@ public class BaseTest {
         Configuration.driverManagerEnabled = true;
         Configuration.headless = true;
         Configuration.fastSetValue=true;
-
+        Configuration.accept_untrusted_certs =true;
+        
      /*   Configuration.remote = "http://localhost:4444/wd/hub";
         Configuration.browser = "chrome";
         Configuration.browserSize = "1920x1080";
